@@ -1,0 +1,19 @@
+# (Optional) Configuration options for the charm
+# This config section defines charm config options, and populates the Configure
+# tab on Charmhub.
+# More information on this section at:
+# https://canonical-charmcraft.readthedocs-hosted.com/en/stable/reference/files/charmcraft-yaml-file/#config
+# General configuration documentation:
+# https://canonical-juju.readthedocs-hosted.com/en/latest/user/reference/configuration/#application-configuration
+config:
+  options:
+    # An example config option to customise the log level of the workload
+    log-level:
+      description: |
+        Configures the log level of gunicorn.
+
+        Acceptable values are: "info", "debug", "warning", "error" and "critical"
+      default: "info"
+      type: string
+
+
