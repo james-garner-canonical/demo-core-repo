@@ -1,7 +1,4 @@
-name: demo-one
 title: Title
-summary: Summary
-description: Description
 
 # Your workload’s containers.
 # https://canonical-charmcraft.readthedocs-hosted.com/en/stable/reference/files/charmcraft-yaml-file/#containers

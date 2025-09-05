@@ -1,3 +1,14 @@
+[project]
+name = "demo-one"
+version = "0.0.0"
+description = "Demo-one charm"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "common",
+    "ops ~= 2.17",
+]
+
 # Testing tools configuration
 [tool.coverage.run]
 branch = true
@@ -28,8 +39,8 @@ lint.extend-ignore = [
     "D409",
     "D413",
 ]
-extend-exclude = ["__pycache__", "*.egg_info"]
 lint.per-file-ignores = {"tests/*" = ["D100","D101","D102","D103","D104"]}
+extend-exclude = ["__pycache__", "*.egg_info"]
 
 [tool.ruff.lint.mccabe]
 max-complexity = 10
@@ -39,3 +50,6 @@ skip = "build,lib,venv,icon.svg,.tox,.git,.mypy_cache,.ruff_cache,.coverage"
 
 [tool.pyright]
 include = ["src/**.py"]
+
+[tool.uv.sources]
+common = { path = "common" }
